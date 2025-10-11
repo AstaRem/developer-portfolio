@@ -20,6 +20,7 @@
   /* --accent-2: #c7f8b5cf60d8; */
   --brand: #F08BC8;
   --brand-2: #10b981;
+  --brand-2-shade: #5ac29f;
   --ring: rgba(139, 92, 246, .25);
   --btn-pr-bg: #D965A9;
   --btn-sec-bg: #EB7BC0;
@@ -79,11 +80,11 @@ body {
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--brand), var(--brand-2));
-  box-shadow: 0 0 0 6px rgba(16, 185, 129, .08)
+  width: 30px;
+  height: 30px;
+  /* border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 0 0 0 6px rgba(16, 185, 129, .08) */
 }
 
 .navlinks a {
@@ -159,21 +160,22 @@ a.btn {
 
 .preview {
   border-radius: var(--radius);
-  background: conic-gradient(from 120deg at 60% 20%, var(--accent), var(--accent-2));
+  /* background: conic-gradient(from 120deg at 60% 20%, var(--accent), var(--accent-2)); */
+  background: var(--card);
   height: 320px;
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden
 }
 
-.preview::after {
+/* .preview::after {
   content: "";
   position: absolute;
   inset: 18px;
   border-radius: 14px;
   background: rgba(255, 255, 255, .75);
   backdrop-filter: blur(2px)
-}
+} */
 
 section {
   padding: 40px 0
@@ -222,8 +224,8 @@ section {
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 999px;
-  background: #eef2ff;
-  color: #3730a3;
+  background: var(--brand-2-shade);
+  color:var(--btn-text);
   margin-right: 8px;
   margin-top: 6px
 }
@@ -268,11 +270,12 @@ section {
 }
 
 .footer {
-  padding: 40px 0 70px;
-  color: var(--muted)
+  padding: 20px 0 30px;
+  color: var(--muted);
+  background-color: var(--header-background);
 }
 
 .btnlink {
-  color: #111;
+  color: var(--ink);
   text-decoration: none
 }
