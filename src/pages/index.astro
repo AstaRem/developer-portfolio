@@ -1,11 +1,71 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+// import SkillPill from "../components/SkillPill.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout>
+  <section class="hero">
+    <div>
+      <span class="badge">Web Dev ✦  React • Astro •JS • TS • Node.js • HTML • CSS • GitHub</span>
+      <h1>Front-end developer building fast, elegant sites & small apps.</h1>
+      <p class="lede">I design and ship clean, accessible websites and dashboards. Passionate about pleasant User Interfaces and seamless User Experiences. I build with JavaScript, TypeScript, React, Astro, HTML/CSS, and Node.js. Based in Lithuania; open to remote.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn secondary" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <div class="preview" aria-hidden="true"></div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Selected projects</h2>
+    <div class="grid">
+      <ProjectCard
+        title="Mosaic-Crowd — crowdfunding platform"
+        thumb="Mosaic-Crowd (Prototype)"
+        description="React + Vite + Express + MySQL prototype with user accounts, projects, donations, and admin moderation. Focus on data modeling and clean UI."
+        chips={["React", "Express", "MySQL", "Auth"]}
+      />
+      <ProjectCard
+        title="My Home Library — personal catalog"
+        thumb="My Home Library"
+        description="Minimal library app to track books, categories, and readers. Clean data model and responsive UI. Designed with a soft, modern palette."
+        chips={["Astro", "TypeScript", "Tailwind"]}
+      />
+      <ProjectCard
+        title="Prompt Library for creatives"
+        thumb="Prompt Library"
+        description="Organize Midjourney/SD prompts by collection. CSV/JSON import, tagging, and quick copy. Built for repeatable junk-journal workflows."
+        chips={["Next.js", "Supabase", "Auth.js"]}
+      />
+      <ProjectCard
+        title="Simple Expense Tracker"
+        thumb="Expense Tracker"
+        description="Personal expense app with categories and monthly summaries. Built as a learning project; clean, reliable CRUD and charts."
+        chips={["React", "LocalStorage", "Charts"]}
+      />
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div>
+      <h2 class="section-title">About</h2>
+      <p>Hi, I’m Asta — a front-end developer moving from transport and logistics into the world of creating beautiful User Interfaces and pleasant User Experiences through code. My interest in building useful digital products began when I collaborated with a developer on an internal transport management system — I was on the business and user side, while they implemented the solution in code. Today, I build with JavaScript, TypeScript, React, Astro, HTML/CSS, and Node.js, always aiming for clarity, order, and thoughtful design.</p>
+    </div>
+    <div>
+      <h3 class="section-title">Skills</h3>
+      <!-- <div class="list">
+        {['Astro','React','TypeScript','HTML/CSS','Tailwind','Node/Express','Supabase','Auth.js','Git/GitHub','SEO & a11y'].map((s) => (
+          <SkillPill label={s} />
+        ))}
+      </div> -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Want to collaborate or need a fast, clean site? Email me directly:</p>
+    <p><a class="btnlink" href="mailto:sweetespressoprints@gmail.com">asta.rem777@gmail.com</a></p>
+  </section>
+</BaseLayout>

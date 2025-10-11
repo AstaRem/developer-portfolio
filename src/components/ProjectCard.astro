@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  chips?: string[];
+  thumb?: string;
+}
+
+const { title, subtitle, description, chips = [], thumb } = Astro.props as Props;
+---
+<article class="card">
+  <div class="thumb">{thumb ?? title}</div>
+  <h3>{title}</h3>
+  {subtitle && <p class="subtitle">{subtitle}</p>}
+  <p>{description}</p>
+  {chips.length > 0 && (
+    <div>
+      {chips.map((c) => <span class="chip">{c}</span>)}
+    </div>
+  )}
+</article>

@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+const { 
+  title = 'Asta Remeikienė — Web Developer & Creative', 
+  description = 'Portfolio of Asta Remeikienė — front-end developer and creative technologist in Lithuania. Astro • React • TypeScript • Design systems.' 
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" />
+    <!-- <link rel="stylesheet" href="/styles/global.css" /> -->
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="brand"><span class="dot" aria-hidden="true"></span> Asta Remeikienė</div>
+          <div class="navlinks">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="container footer">
+      © {new Date().getFullYear()} Asta Remeikienė — Built with Astro
+    </footer>
+  </body>
+</html>
