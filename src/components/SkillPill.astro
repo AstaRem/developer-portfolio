@@ -1,0 +1,21 @@
+---
+interface Props {
+  label: string;
+  href?: string;              // optional — turns pill into a link
+  variant?: 'soft' | 'outline' | 'brand'; // visual style
+  title?: string;             // optional tooltip
+}
+const { label, href, variant = 'soft', title } = Astro.props;
+const Tag = href ? 'a' : 'span';
+---
+
+<Tag
+  class={`pill`}
+  data-variant={variant}
+  href={href}
+  title={title ?? label}
+  {...(href ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+  aria-label={`Skill: ${label}`}
+>
+  {label}
+</Tag>

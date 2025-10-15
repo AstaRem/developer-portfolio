@@ -1,5 +1,5 @@
 :root {
-  --bg: #faf9fb;
+  /* --bg: #faf9fb;
   --card: #ffffff;
   --ink: #1f2937;
   --muted: #6b7280;
@@ -9,13 +9,13 @@
   --brand-2: #10b981;
   --ring: rgba(139, 92, 246, .25);
   --radius: 18px;
-  --shadow: 0 10px 30px rgba(2, 6, 23, .06), 0 2px 8px rgba(2, 6, 23, .04); 
+  --shadow: 0 10px 30px rgba(2, 6, 23, .06), 0 2px 8px rgba(2, 6, 23, .04);  */
  
   /* dark theme */
   --bg: #0E0A33;
   --card: #1D1950;
   --ink: #EFEEFC;
-  --muted: #dad9e7;
+  --muted: #c1c0c7;
   --accent: #1D1950;
   /* --accent-2: #c7f8b5cf60d8; */
   --brand: #F08BC8;
@@ -53,7 +53,7 @@ body {
 .container {
   max-width: 1060px;
   margin: 0 auto;
-  padding: 24px
+  padding: 24px 50px;
 }
 
 .header {
@@ -101,7 +101,7 @@ body {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
   gap: 24px;
-  align-items: center;
+  /* align-items: start; */
   padding: 56px 0
 }
 
@@ -109,22 +109,23 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 10px;
+  padding: 0 10px 6px 10px;
   border-radius: 999px;
   background: var(--accent);
   color: var(--brand);
-  font-weight: 600
+  font-weight: 600;
+  font-size: 12px;
 }
 
 h1 {
-  font-size: clamp(28px, 5vw, 48px);
+  font-size: clamp(22px, 2vw, 36px);
   line-height: 1.15;
   margin: 16px 0
 }
 
 .lede {
   color: var(--muted);
-  font-size: 18px
+  font-size: 16px
 }
 
 .cta {
@@ -139,6 +140,7 @@ h1 {
   border-radius: 12px;
   padding: 12px 16px;
   font-weight: 700;
+  font-size: 12px;
   cursor: pointer;
   box-shadow: var(--shadow);
   color: var(--btn-text);
@@ -162,7 +164,7 @@ a.btn {
   border-radius: var(--radius);
   /* background: conic-gradient(from 120deg at 60% 20%, var(--accent), var(--accent-2)); */
   background: var(--card);
-  height: 320px;
+  height: 300px;
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden
@@ -182,7 +184,7 @@ section {
 }
 
 .section-title {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 0 16px;
   font-weight: 800
 }
@@ -190,7 +192,7 @@ section {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 20px
+  gap: 20px;
 }
 
 .card {
@@ -198,9 +200,9 @@ section {
   background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 20px;
+  padding: 30px;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 @media (min-width:860px) {
@@ -211,7 +213,7 @@ section {
 
 .card h3 {
   margin: 6px 0 6px;
-  font-size: 20px
+  font-size: 16px
 }
 
 .card p {
@@ -221,7 +223,7 @@ section {
 
 .chip {
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
   padding: 4px 10px;
   border-radius: 999px;
   background: var(--brand-2-shade);
@@ -266,7 +268,8 @@ section {
 .pill {
   padding: 8px 12px;
   border-radius: 999px;
-  background: #f4f6fb
+  background: var(--card);
+  font-size: 12px;
 }
 
 .footer {
@@ -278,4 +281,16 @@ section {
 .btnlink {
   color: var(--ink);
   text-decoration: none
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-icon img {
+  width: 20px;
+}
+
+.social-icon {
+  padding-right: 10px;
 }

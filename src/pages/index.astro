@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import SkillPill from "../components/SkillPill.astro";
 // import SkillPill from "../components/SkillPill.astro";
 ---
 
@@ -9,7 +10,9 @@ import ProjectCard from "../components/ProjectCard.astro";
     <div>
       <span class="badge">Web Dev ✦  React • Astro •JS • TS • Node.js • HTML • CSS • GitHub</span>
       <h1>Front-end developer building fast, elegant sites & small apps.</h1>
-      <p class="lede">I design and ship clean, accessible websites and dashboards. Passionate about pleasant User Interfaces and seamless User Experiences. I build with JavaScript, TypeScript, React, Astro, HTML/CSS, and Node.js. Based in Lithuania; open to remote.</p>
+      <p class="lede">I design and ship clean, accessible websites and dashboards. Passionate about pleasant User Interfaces and seamless User Experiences. 
+        <br/>
+        Building with JavaScript, TypeScript, React, Astro, HTML/CSS, and Node.js. Based in Lithuania; open to remote.</p>
       <div class="cta">
         <a class="btn primary" href="#projects">See projects</a>
         <a class="btn secondary" href="#contact">Contact me</a>
@@ -64,11 +67,11 @@ import ProjectCard from "../components/ProjectCard.astro";
     </div>
     <div>
       <h3 class="section-title">Skills</h3>
-      <!-- <div class="list">
-        {['Astro','React','TypeScript','HTML/CSS','Tailwind','Node/Express','Supabase','Auth.js','Git/GitHub','SEO & a11y'].map((s) => (
+      <div class="list">
+        {['JavaScript','TypeScript','React', 'Astro','HTML/CSS','Bootstrap','Node', 'Express','Git/GitHub','SEO & a11y', 'VS Code'].map((s) => (
           <SkillPill label={s} />
         ))}
-      </div> -->
+      </div>
     </div>
   </section>
 
@@ -76,6 +79,14 @@ import ProjectCard from "../components/ProjectCard.astro";
     <h2 class="section-title">Contact</h2>
     <p>Want to collaborate or need a fast, clean site? Email me directly:</p>
     <p><a class="btnlink" href="mailto:asta.rem777@gmail.com">asta.rem777@gmail.com</a></p>
-    <p><a class="btnlink" href="">LinkedIn , Github</a></p>
+
+    <div class="social-links">
+      <div>      
+        <a class="social-icon" href="https://github.com/AstaRem" target="blank"><img src="/github.svg"/></a>
+      </div>
+      <div>
+        <a class="social-icon" href="https://www.linkedin.com/in/asta-rem/" target="blank"><img src="/linkedin.svg"/></a>
+      </div>
+    </div>
   </section>
 </BaseLayout>
